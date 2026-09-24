@@ -12,6 +12,10 @@
     .stars { position:fixed; inset:0; pointer-events:none; opacity:.65; background-image:radial-gradient(1px 1px at 12% 24%,#fff 99%,transparent),radial-gradient(1.5px 1.5px at 76% 18%,#b7e9ff 99%,transparent),radial-gradient(1px 1px at 87% 63%,#fff 99%,transparent),radial-gradient(1.5px 1.5px at 23% 78%,#ffc7e7 99%,transparent),radial-gradient(1px 1px at 54% 91%,#fff 99%,transparent),radial-gradient(1px 1px at 43% 12%,#fff 99%,transparent); background-size:400px 400px; }
     .orb { position:fixed; width:340px; aspect-ratio:1; border-radius:50%; filter:blur(90px); opacity:.17; background:#a15cff; left:-170px; top:35%; }
     main { width:min(100%,760px); position:relative; text-align:center; padding:clamp(32px,8vw,76px) clamp(24px,7vw,68px); border:1px solid #ffffff20; border-radius:32px; background:linear-gradient(145deg,#ffffff0d,#ffffff04); box-shadow:0 28px 100px #0007,inset 0 1px #ffffff18; backdrop-filter:blur(18px); animation:arrive .9s cubic-bezier(.2,.8,.2,1) both; }
+    .site-nav { position:fixed; z-index:2; top:22px; left:50%; transform:translateX(-50%); display:flex; gap:6px; padding:6px; border:1px solid #ffffff20; border-radius:99px; background:#0b1020a8; backdrop-filter:blur(14px); }
+    .site-nav a { padding:9px 14px; color:#aaaac4; text-decoration:none; font-size:.86rem; border-radius:99px; transition:background .2s,color .2s; }
+    .site-nav a:hover,.site-nav a[aria-current="page"] { color:#fff; background:#ffffff16; }
+    @media(max-width:520px) { .site-nav { top:12px } main { margin-top:58px } footer { position:relative; bottom:auto; margin-top:24px; text-align:center } body { overflow:auto; align-content:center } }
     .eyebrow { display:inline-flex; align-items:center; gap:9px; color:#d9d5f3; border:1px solid #ffffff20; border-radius:99px; padding:8px 13px; font-size:.76rem; letter-spacing:.13em; text-transform:uppercase; }
     .dot { width:7px; height:7px; border-radius:50%; background:#7dffbd; box-shadow:0 0 14px #7dffbd; }
     h1 { margin:28px 0 14px; font-size:clamp(3.6rem,11vw,7.2rem); letter-spacing:-.075em; line-height:.95; font-weight:760; background:linear-gradient(105deg,#fff 14%,#c9c3ff 48%,#81e7ff 88%); color:transparent; background-clip:text; -webkit-background-clip:text; }
@@ -30,6 +34,7 @@
   </style>
 </head>
 <body>
+  <nav class="site-nav" aria-label="Main navigation"><a href="hello-world.html" aria-current="page">Home</a><a href="about.html">About</a><a href="contact.html">Contact</a></nav>
   <div class="stars" aria-hidden="true"></div><div class="orb" aria-hidden="true"></div>
   <main>
     <div class="eyebrow"><span class="dot" aria-hidden="true"></span> A fresh little beginning</div>
@@ -59,3 +64,5 @@
   </script>
 </body>
 </html>
+
+
